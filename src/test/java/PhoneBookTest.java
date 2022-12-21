@@ -39,4 +39,14 @@ public class PhoneBookTest {
         String expected = "1111111";
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void printAllNamesTest() {
+        sut.add("Vasilii", "1111111");
+        sut.add("Oleg", "2222222");
+        sut.add("Irina", "4444444");
+        String actual = sut.printAllNames();
+        String expected = "[Irina, Oleg, Vasilii]";
+        assertEquals(expected, actual);
+    }
 }
