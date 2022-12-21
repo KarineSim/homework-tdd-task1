@@ -21,4 +21,13 @@ public class PhoneBookTest {
         int expected = 3;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void findByNumberTest() {
+        sut.add("Vasilii", "1111111");
+        sut.add("Oleg", "2222222");
+        String actual = sut.findByNumber("2222222");
+        String expected = "Oleg";
+        assertEquals(expected, actual);
+    }
 }
